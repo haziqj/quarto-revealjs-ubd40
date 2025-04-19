@@ -1,0 +1,624 @@
+/*-- scss:defaults --*/
+
+// Custom colours and variables
+$jet: #131516;
+$right-arrow: "\2192"; // Unicode character for right arrow
+$whitecircle: "\25cb"; // Unicode character for right arrow
+$ubdblue: #325494;
+$ubdteal: #58DDB3;
+$ubdyellow: #F5C946;
+$ubdred: #b10f2e;
+$ubdblack: #230C0F;
+$ubdgray: #999;
+$white: #fff;
+
+$ubddeepred: #b71757;
+$ubdbrightred: #e81856;
+$ubdsoftred: #f05a91;
+$ubddarkgrey: #404041;
+
+// Colour text
+
+.ubdblue {
+  color: $ubdblue;
+}
+
+.ubdteal {
+  color: #52ba99;
+}
+
+.ubdyellow {
+  color: $ubdyellow;
+}
+
+.ubdred {
+  color: $ubdred;
+}
+
+.ubdgray {
+  color: $ubdgray;
+}
+
+.ubddeepred {
+  color: $ubddeepred;
+}
+
+.ubdbrightred {
+  color: $ubdbrightred;
+}
+
+.ubdsoftred {
+  color: $ubdsoftred;
+}
+
+// Background text fill
+
+.ubdbluebg {
+  color: $white;
+  background-color: $ubdblue;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.ubdredbg {
+  color: $white;
+  background-color: $ubdred;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.ubdyellowbg {
+  background-color: $ubdyellow;
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.ubdtealbg {
+  background-color: $ubdteal;
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+$font-family-sans-serif: "Nunito Sans", sans-serif !default;
+$presentation-font-size-root: 36px;
+
+$presentation-heading-font: "Nunito Sans", sans-serif !default;
+$presentation-heading-color: $ubdblack !default;
+$presentation-heading-font-weight: 200;
+//$presentation-heading-line-height: 2;
+//$presentation-block-margin: 28px;
+
+// colors
+//$body-bg: #f0f1eb !default;
+$body-color: $jet !default;
+$link-color: $ubddeepred !default;
+$selection-bg: $ubdsoftred !default;
+
+/*-- scss:rules --*/
+
+.reveal a {
+  line-height: 1.5em;
+  font-size: 100%;
+}
+
+.reveal p {
+  font-weight: 350;
+  margin-top: 1em;
+  font-size: 100%;
+  padding-bottom: 5px;
+}
+
+// title and headings
+
+#title-slide {
+  text-align: left;
+  color: $white;
+  display: block;
+  margin-top: 1.8em;
+  margin-left: 1em;
+  width: 90%;
+
+  .title {
+    color: $white;
+    font-size: 1.4em;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    color: $white;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+ 
+  .institute {
+    color:$white
+  }
+  .quarto-title-institute {
+    font-style: bold;
+    color: $white;
+  }
+  .quarto-title-affiliation,
+  .quarto-title-author-email {
+    color: $white;
+    font-style: italic;
+    // font-size: 80%;
+    // color: #7F7F7F;
+  }
+
+  .date {
+    margin-top: 0.25em;
+  }
+
+  .author,
+  .quarto-title-author-name {
+    margin-top: 0.5em;
+    color: $white;
+  }
+
+  .quarto-title-authors {
+    display: flex;
+    justify-content: left;
+
+    .quarto-title-author {
+      padding-left: 0em;
+      padding-right: 0em;
+      width: 100%;
+    }
+  }
+
+}
+
+.reveal h1 {
+  font-weight: 300;
+}
+
+.reveal h2 {
+  font-weight: 400;
+  font-size: 1.35em;
+  margin-top: -0.2em;
+}
+
+.reveal h3 {
+  color: $ubdbrightred;
+  font-style: italic;
+  font-weight: 350;
+  font-size: 1em;
+  margin-bottom: -5px;
+}
+
+.reveal h4 {
+  color: $ubddarkgrey;
+  font-weight: 350;
+  font-size: 0.9em;
+  padding-top: 0.5em;
+  margin-top: 0.25em;
+  // margin-bottom: -0.25em;
+}
+
+// alerts etc.
+
+.alert {
+  color: $ubddeepred;
+}
+
+.fg {
+  color: var(--col, $ubdblack);
+}
+
+.bg {
+  background-color: var(--col, #fff);
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+// lists
+
+// Unordered lists
+
+.reveal ul {
+  font-weight: 300;
+  padding-left: 16px;
+  font-size: 92%;
+  margin-top: 0;
+  padding-top: 0;
+
+  li::marker {
+    // color: mix($ubdblue, white, 70%);/**/
+    color: $ubdgray;
+  }
+}
+
+.reveal ul ul {
+  list-style: none;
+  font-size: 85%;
+  padding: 0;
+  margin-bottom: 0;
+  
+  li:before {
+    content: $whitecircle;
+    // color: mix($ubdblue, white, 60%);
+    color: $ubdgray;
+    display: inline-block;
+    width: 0.3em;
+    margin-left: -1.2em;
+    margin-right: 0.8em;
+  }
+}
+
+// Ordered lists
+
+.reveal ol {
+  font-weight: 300;
+  padding-left: 16px;
+  font-size: 92%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  li::marker {
+    color: $ubdgray;
+  }
+}
+
+.reveal ol ol {
+  font-size: 85%;
+  padding: 0;
+  margin-bottom: 0;
+  
+  li::marker {
+    color: $ubdgray;
+  }
+}
+
+// Move "hamburger" menu button to top right
+
+.reveal .slide-menu-button {
+  position: fixed;
+  bottom: 5px !important;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.reveal .slide-menu-button > * {
+  pointer-events: auto;
+}
+
+// Same for chalkboard buttons (with an offset)
+
+.reveal .slide-chalkboard-buttons {
+  position: fixed;
+  bottom: 12px !important;
+  right: 28px !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.reveal .slide-chalkboard-buttons > * {
+  pointer-events: auto;
+}
+
+// Beamer-style button link environment
+
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: $ubddeepred;
+  border: 1px solid $ubdbrightred;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.button::before {
+  content: "▶";
+  margin-right: 5px;
+}
+
+// Special catch for etable environment to ensure these table images
+// don't overflow the slide.
+// See: https://lrberge.github.io/fixest/articles/etable_new_features.html
+
+.etable {
+  width: 100%;
+  height: calc(100% - 3em); /* Adjust 3em based on the height of your header, if necessary */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.etable img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+// UBD Logo
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  z-index: 0;
+  bottom: unset !important;
+  left: unset !important;
+  top: -5px !important;
+  right: 0px !important;
+  max-height: 15% !important;
+  min-height: 15% !important;
+}
+
+// Slide numbers
+
+.slide-number, .reveal.has-logo .slide-number {
+  top: unset !important;
+  right: unset !important;
+  bottom: 10px !important;
+  left: 10px !important;
+  color: #999 !important;
+}
+
+// Hide logo and slide number on the title slide
+.reveal .slide-number > a[href*='title-slide'] {
+  display: none;
+}
+
+// Format for inline code and chunks
+
+.reveal .slides code{
+  font-size: 0.9em;
+  color: $ubdblack;
+  background-color: mix($ubdgray, white, 40%);
+  padding: 0.05em;
+  border-radius: 5px;  
+}
+
+.reveal .slides code.sourceCode {
+  font-size: 1.2em;
+}
+
+div.cell-output.cell-output-stdout > pre > code {
+  /* Your styles here, e.g., */
+  font-size: 1.2em;  /* Adjust this value to your preference */
+  background-color: mix($ubdgray, white, 0%);
+  padding: 0.25em;
+  border-radius: 0px;  
+  overflow-y: visible;
+  // max-height: none;
+}
+
+// Make column text smaller
+
+.column > p {
+  font-size: 0.95em; 
+  margin-bottom: -1em;
+}
+
+// Progress bar
+
+.reveal .progress {
+  background: $ubdsoftred;
+  color: $ubddeepred;
+  height: 1.5%;
+}
+
+// Convenient transition slides
+
+.reveal .transition-slide {
+  background-color: $ubdblue;
+}
+
+.reveal .transition-slide-ubdyellow {
+  background-color: $ubdyellow;
+}
+
+.reveal .transition-slide-ubdteal {
+  background-color: $ubdteal;
+}
+
+.reveal .transition-slide-ubdblue {
+  background-color: $ubdblue;
+}
+
+.reveal .transition-slide-ubddeepred {
+  background-color: $ubddeepred;
+}
+
+.reveal .transition-slide-ubdbrightred {
+  background-color: $ubdbrightred;
+}
+
+.reveal .transition-slide-ubdsoftred {
+  background-color: $ubdsoftred;
+}
+
+.reveal .transition-slide-ubdblack {
+  background-color: $ubddarkgrey;
+  * {
+    color: $white !important;
+  }
+}
+
+// Make math fonts smaller
+
+span.math.inline, span.math.display {
+  font-size: 0.9em;  
+}
+
+// Reduce space between display equation
+
+.reveal p:has(> .math.display) {
+    margin-bottom: -0.5em;  
+}
+
+.reveal figcaption {
+  margin-top: -0.2em;
+  //margin-bottom: -0.2em;
+}
+
+.reveal aside {
+  position: absolute;
+  top: 690px;
+  left: 25px;
+}
+
+.reveal blockquote {
+  margin-bottom: -0.25em
+}
+
+.small-text {
+  font-size: 0.6em;
+  margin-top: -5px;
+}
+
+.cell-output-display p {
+  margin-bottom: 0px; 
+}
+
+.cell {
+  margin-bottom: 0;  /* Removes any bottom margin on the .cell, reducing space below it */
+}
+
+.cell-output-display p,
+.column > p:first-of-type {
+  margin-bottom: 0;  /* Remove the space below the <p> inside .cell-output-display and the first <p> in .column */
+}
+
+.column > p:not(:first-of-type) {
+  margin-top: 0;  /* Remove the space above all <p> elements in .column except the first one */
+}
+
+// Too much space after figures
+
+div.quarto-figure.quarto-figure-center {
+    margin: 0 !important;  /* '0' eliminates the margin, and '!important' ensures this rule takes precedence */
+}
+
+// Target the table class for the striped and hover effects, then enhance it for the booktabs style
+.table-ubd {
+  // Remove default borders to start with a clean slate
+  border-collapse: collapse;
+  border: none;
+
+  // Target the header row for the top and midline
+  thead {
+    tr.header {
+      th {
+        border-top: 2px solid black; // Top line above headers
+        border-bottom: 2px solid black; // Midline below headers
+        padding: 8px; // Adjust padding as needed
+        text-align: left; // Adjust text alignment as preferred
+      }
+    }
+  }
+
+  tbody tr td {
+    border: none;
+  }
+  
+  // Target the last row in the tbody to apply the bottom border
+  tbody tr:last-child {
+    td {
+      border-top: 2px solid black; // Apply a solid bottom border
+    }
+  }
+}
+
+// Callout blocks
+
+.callout {
+  &.callout-note {
+    .callout-body {
+      
+      .callout-title {
+        p {
+          font-size: 1.2em; 
+        }
+      }
+
+      // Adjust the font size for content inside the callout block
+      .callout-content {
+        font-size: 1.3em; 
+        .math.inline {
+          font-size: 1em; 
+        }
+        .math.display {
+          font-size: 1.1em; 
+        }
+      }
+    }
+  }
+}
+
+.r-stack .cell .cell-output-display img {
+  width: auto !important; /* Return to default width */
+  max-width: 100% !important; /* Ensure it can grow beyond 100% of its container */
+  // transform: scale(1.2) !important; /* Enforce scaling; adjust as needed */
+}
+
+// Nudge
+.nudge-up-xxl {
+  transform: translateY(-110px);
+}
+
+.nudge-up-xl {
+  transform: translateY(-75px);
+}
+
+.nudge-up-large {
+  transform: translateY(-50px);
+}
+
+.nudge-up-medium {
+  transform: translateY(-37.5px);
+}
+
+.nudge-up {
+  transform: translateY(-25px);
+}
+
+.nudge-up-small {
+  transform: translateY(-12.5px);
+}
+
+.nudge-down {
+  transform: translateY(25px);
+}
+
+.nudge-down {
+  transform: translateY(12.5px);
+}
+
+.nudge-down-medium {
+  transform: translateY(37.5px);
+}
