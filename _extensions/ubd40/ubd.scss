@@ -9,12 +9,12 @@ $ubdteal: #58DDB3;
 $ubdyellow: #F5C946;
 $ubdred: #b10f2e;
 $ubdblack: #230C0F;
-$ubdgray: #999;
+$ubdgrey: #999;
 $white: #fff;
 
-$ubddeepred: #b71757;
-$ubdbrightred: #e81856;
-$ubdsoftred: #f05a91;
+$ubdrubydeep: #b71757;
+$ubdrubybright: #e81856;
+$ubdrubysoft: #f05a91;
 $ubddarkgrey: #404041;
 
 // Colour text
@@ -35,20 +35,20 @@ $ubddarkgrey: #404041;
   color: $ubdred;
 }
 
-.ubdgray {
-  color: $ubdgray;
+.ubdgrey {
+  color: $ubdgrey;
 }
 
-.ubddeepred {
-  color: $ubddeepred;
+.ubdrubydeep {
+  color: $ubdrubydeep;
 }
 
-.ubdbrightred {
-  color: $ubdbrightred;
+.ubdrubybright {
+  color: $ubdrubybright;
 }
 
-.ubdsoftred {
-  color: $ubdsoftred;
+.ubdrubysoft {
+  color: $ubdrubysoft;
 }
 
 // Background text fill
@@ -102,8 +102,8 @@ $presentation-heading-font-weight: 200;
 // colors
 //$body-bg: #f0f1eb !default;
 $body-color: $jet !default;
-$link-color: $ubddeepred !default;
-$selection-bg: $ubdsoftred !default;
+$link-color: $ubdrubydeep !default;
+$selection-bg: $ubdrubysoft !default;
 
 /*-- scss:rules --*/
 
@@ -191,7 +191,7 @@ $selection-bg: $ubdsoftred !default;
 }
 
 .reveal h3 {
-  color: $ubdbrightred;
+  color: $ubdrubybright;
   font-style: italic;
   font-weight: 350;
   font-size: 1em;
@@ -210,7 +210,7 @@ $selection-bg: $ubdsoftred !default;
 // alerts etc.
 
 .alert {
-  color: $ubddeepred;
+  color: $ubdrubydeep;
 }
 
 .fg {
@@ -237,7 +237,7 @@ $selection-bg: $ubdsoftred !default;
 
   li::marker {
     // color: mix($ubdblue, white, 70%);/**/
-    color: $ubdgray;
+    color: $ubdgrey;
   }
 }
 
@@ -250,7 +250,7 @@ $selection-bg: $ubdsoftred !default;
   li:before {
     content: $whitecircle;
     // color: mix($ubdblue, white, 60%);
-    color: $ubdgray;
+    color: $ubdgrey;
     display: inline-block;
     width: 0.3em;
     margin-left: -1.2em;
@@ -268,7 +268,7 @@ $selection-bg: $ubdsoftred !default;
   margin-bottom: 0;
 
   li::marker {
-    color: $ubdgray;
+    color: $ubdgrey;
   }
 }
 
@@ -278,15 +278,15 @@ $selection-bg: $ubdsoftred !default;
   margin-bottom: 0;
   
   li::marker {
-    color: $ubdgray;
+    color: $ubdgrey;
   }
 }
 
-// Move "hamburger" menu button to top right
+// Move "hamburger" menu button to bottom right
 
 .reveal .slide-menu-button {
   position: fixed;
-  bottom: 5px !important;
+  bottom: 10px !important;
   right: 0;
   display: flex;
   justify-content: flex-end;
@@ -302,7 +302,7 @@ $selection-bg: $ubdsoftred !default;
 
 .reveal .slide-chalkboard-buttons {
   position: fixed;
-  bottom: 12px !important;
+  bottom: 17px !important;
   right: 28px !important;
   display: flex;
   justify-content: flex-end;
@@ -327,8 +327,8 @@ $selection-bg: $ubdsoftred !default;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  background-color: $ubddeepred;
-  border: 1px solid $ubdbrightred;
+  background-color: $ubdrubydeep;
+  border: 1px solid $ubdrubybright;
   color: #fff !important;
   text-decoration: none;
   border-radius: 4px;
@@ -398,7 +398,7 @@ $selection-bg: $ubdsoftred !default;
 .reveal .slides code{
   font-size: 0.9em;
   color: $ubdblack;
-  background-color: mix($ubdgray, white, 40%);
+  background-color: mix($ubdgrey, white, 40%);
   padding: 0.05em;
   border-radius: 5px;  
 }
@@ -410,7 +410,7 @@ $selection-bg: $ubdsoftred !default;
 div.cell-output.cell-output-stdout > pre > code {
   /* Your styles here, e.g., */
   font-size: 1.2em;  /* Adjust this value to your preference */
-  background-color: mix($ubdgray, white, 0%);
+  background-color: mix($ubdgrey, white, 0%);
   padding: 0.25em;
   border-radius: 0px;  
   overflow-y: visible;
@@ -427,8 +427,8 @@ div.cell-output.cell-output-stdout > pre > code {
 // Progress bar
 
 .reveal .progress {
-  background: $ubdsoftred;
-  color: $ubddeepred;
+  background: $ubdrubysoft;
+  color: $ubdrubydeep;
   height: 1.5%;
 }
 
@@ -450,16 +450,16 @@ div.cell-output.cell-output-stdout > pre > code {
   background-color: $ubdblue;
 }
 
-.reveal .transition-slide-ubddeepred {
-  background-color: $ubddeepred;
+.reveal .transition-slide-ubdrubydeep {
+  background-color: $ubdrubydeep;
 }
 
-.reveal .transition-slide-ubdbrightred {
-  background-color: $ubdbrightred;
+.reveal .transition-slide-ubdrubybright {
+  background-color: $ubdrubybright;
 }
 
-.reveal .transition-slide-ubdsoftred {
-  background-color: $ubdsoftred;
+.reveal .transition-slide-ubdrubysoft {
+  background-color: $ubdrubysoft;
 }
 
 .reveal .transition-slide-ubdblack {
