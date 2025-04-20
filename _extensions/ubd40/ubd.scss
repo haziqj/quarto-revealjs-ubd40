@@ -86,14 +86,21 @@ $ubddarkgrey: #404041;
 }
 
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+// @import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+// @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-$font-family-sans-serif: "Nunito Sans", sans-serif !default;
+// Avenir Next
+@font-face {
+  font-family: 'Avenir Next Variable';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2729/AvenirNext_Variable.ttf') format('truetype');
+  font-weight: 100 900;  // minimum weight is 400
+}
+
+$font-family-sans-serif: "Avenir Next Variable", sans-serif !default;
 $presentation-font-size-root: 36px;
 
-$presentation-heading-font: "Nunito Sans", sans-serif !default;
+$presentation-heading-font: "Avenir Next Variable", sans-serif !default;
 $presentation-heading-color: $ubdblack !default;
 $presentation-heading-font-weight: 200;
 //$presentation-heading-line-height: 2;
