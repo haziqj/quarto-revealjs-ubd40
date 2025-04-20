@@ -1,0 +1,41 @@
+title: ubd40vid
+author: Haziq Jamil
+version: 1.0.1
+quarto-required: ">=1.7.0"
+contributes:
+  formats:
+    revealjs:
+      # template-partials:
+      #   - title-slide.html
+      theme: [default, ubd40vid.scss]
+      logo: ubd_brand_logo_40.png
+      title-slide-attributes:
+        data-background-video: https://ubd.edu.bn/wp-content/uploads/2025/04/White-Modern-Liquid-Motivational-Reminder-Quote-Video3.mp4
+        data-background-video-loop: true
+        data-background-opacity: 0.15
+        data-background-position: center
+        data-background-size: cover
+      menu:
+        side: left
+      slide-number: true
+      date-format: long
+      html-math-method: mathjax
+      preview-links: auto
+      include-after: |
+        <script type="text/javascript">
+          Reveal.on('ready', event => {
+            if (event.indexh === 0) {
+              document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
+            }
+          });
+          Reveal.addEventListener('slidechanged', (event) => {
+            if (event.indexh === 0) {
+              Reveal.configure({ slideNumber: null });
+              document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
+            }
+            if (event.indexh === 1) { 
+              Reveal.configure({ slideNumber: 'c/t' });
+              document.querySelector("div.has-logo > img.slide-logo").style.display = null;
+            }
+          });
+        </script>

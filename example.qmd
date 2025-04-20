@@ -1,0 +1,25 @@
+---
+title: The (unofficial) reveal.js UBD40 theme
+subtitle: An example presentation using quarto
+format:
+  ubd40vid-revealjs:
+    transition: fade
+    auto-stretch: false
+    width: 1250  # 1050
+    height: 760  # 700
+    self-contained: false
+    toc: false
+    toc-depth: 1
+    code-block-height: 700px
+    # html-table-processing: none
+author:
+  - name: Haziq Jamil
+    orcid: 0000-0003-3298-1010
+    email: haziq.jamil@ubd.edu.bn
+    affiliations: Universiti Brunei Darussalam
+date: last-modified
+---
+
+### A slide
+
+Hello, World!
